@@ -69,8 +69,10 @@ One can use the following environment variables for configuring the ZooKeeper no
 | 5 | SCHEMA\_REGISTRY\_JMX\_OPTS | - | JMX options used for monitoring | SCHEMA\_REGISTRY\_OPTS should contain 'com.sun.management.jmxremote.rmi.port' property |
 | 6 | SCHEMA\_REGISTRY\_KAFKASTORE\_BOOTSTRAP\_SERVERS | - | A list of Kafka brokers to connect to | If this configuration is not specified, the Schema Registry’s internal Kafka clients will get their Kafka bootstrap server list from ZooKeeper (configured with kafkastore.connection.url). Note that if kafkastore.bootstrap.servers is configured, kafkastore.connection.url still needs to be configured, too. |
 | 7 | SCHEMA\_REGISTRY\_KAFKASTORE\_CONNECTION\_URL | - | Zookeeper url for the Kafka cluster | Required |
-| 8 | SCHEMA\_REGISTRY\_LOG4J\_LOGGERS | - | - | - |
-| 9 | SCHEMA\_REGISTRY\_LOG4J\_ROOT\_LOGLEVEL | INFO | - | - |
+| 8 | SCHEMA_REGISTRY\_LISTENERS | 8081 | Port for incomming connections | - |
+| 9 | SCHEMA\_REGISTRY\_LOG4J\_LOGGERS | - | - | - |
+| 10 | SCHEMA\_REGISTRY\_LOG4J\_ROOT\_LOGLEVEL | INFO | - | - |
+| 11 | SCHEMA\_REGISTRY\_PORT | - | Port for incomming connections | Deprecated, use SCHEMA_REGISTRY\_LISTENERS instead |
 
 Apart from these, one can use any of the properties specified in the [Configuration Options] by replacing "." with "\_" and appending "SCHEMA\_REGISTRY\_" before the property name. For example, instead of ```kafkastore.connection.url``` use ```SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL```.
 
@@ -94,3 +96,5 @@ Apart from these, one can use any of the properties specified in the [Configurat
    [Configuration Options]: <http://docs.confluent.io/current/schema-registry/docs/config.html>
    [Apache License]: <https://raw.githubusercontent.com/MihaiBogdanEugen/confluent-osp-schema-registry/master/LICENSE>
    [Oracle Binary Code License Agreement]: <https://raw.githubusercontent.com/MihaiBogdanEugen/confluent-osp-schema-registry/master/Oracle_Binary_Code_License_Agreement%20for%20the%20Java%20SE%20Platform_Products_and_JavaFX>
+
+   CONFIGURE PORT SAU LISTENERS IN CONFIGURE FILE????
