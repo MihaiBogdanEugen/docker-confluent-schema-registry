@@ -72,9 +72,8 @@ One can use the following environment variables for configuring the ZooKeeper no
 | 8 | SCHEMA_REGISTRY\_LISTENERS | 8081 | Port for incomming connections | - |
 | 9 | SCHEMA\_REGISTRY\_LOG4J\_LOGGERS | - | - | - |
 | 10 | SCHEMA\_REGISTRY\_LOG4J\_ROOT\_LOGLEVEL | INFO | - | - |
-| 11 | SCHEMA\_REGISTRY\_PORT | - | Port for incomming connections | Deprecated, use SCHEMA_REGISTRY\_LISTENERS instead |
 
-Apart from these, one can use any of the properties specified in the [Configuration Options] by replacing "." with "\_" and appending "SCHEMA\_REGISTRY\_" before the property name. For example, instead of ```kafkastore.connection.url``` use ```SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL```.
+Moreover, one can use any of the properties specified in the [Configuration Options] by replacing "." with "\_" and appending "SCHEMA\_REGISTRY\_" before the property name. For example, instead of ```kafkastore.connection.url``` use ```SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL```.
 
 ### Dual licensed under: ###
 
@@ -96,5 +95,3 @@ Apart from these, one can use any of the properties specified in the [Configurat
    [Configuration Options]: <http://docs.confluent.io/current/schema-registry/docs/config.html>
    [Apache License]: <https://raw.githubusercontent.com/MihaiBogdanEugen/confluent-osp-schema-registry/master/LICENSE>
    [Oracle Binary Code License Agreement]: <https://raw.githubusercontent.com/MihaiBogdanEugen/confluent-osp-schema-registry/master/Oracle_Binary_Code_License_Agreement%20for%20the%20Java%20SE%20Platform_Products_and_JavaFX>
-
-   CONFIGURE PORT SAU LISTENERS IN CONFIGURE FILE????
